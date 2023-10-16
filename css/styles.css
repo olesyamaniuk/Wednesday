@@ -1,0 +1,192 @@
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style-type: none;
+}
+button {
+  /* міняється курсор */
+  cursor: pointer;
+}
+
+body {
+  /* serif - засічки, хвостики 
+    sans-serif - без засічок
+    */
+  font-family: "Montserrat", sans-serif;
+}
+
+.logotype {
+  font-size: 18px;
+  /* за замовчування посилання має 400 */
+  font-weight: 700;
+  /* line-height > font-size*/
+  /* line-height: 20px; */
+  /* line-height / font-size 20/18=1.111111111*/
+  line-height: 1.11;
+
+  /* 1em = font-size*/
+  /* letter-spacing: -0.54px; */
+  /* letter-spacing / font-size */
+  letter-spacing: -0.03em;
+  /* гарно коли є 6 цифер в кольорі */
+  color: #111111;
+}
+
+.menu-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1, 14;
+  letter-spacing: -0, 02em;
+  color: #111111;
+}
+.menu-link:hover,
+.menu-link:focus {
+  color: #fd9222;
+}
+
+/* ========== */
+
+.main-title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1, 21; /* 121.429% */
+  letter-spacing: -0.03em;
+  /* color: #ffffff; */
+}
+.buy-now-btn {
+  font-size: 14px;
+  font-weight: 600;
+  background: #fd9222;
+}
+.buy-now-btn:hover,
+.buy-now-btn:focus {
+  background-color: #fcf1e0;
+  color: #fd9222;
+}
+
+.how-made-link {
+  font-size: 14px;
+  font-weight: 600;
+  /* color: #ffffff; */
+}
+.how-made-link:hover,
+.how-made-link:focus {
+  color: #fd9222;
+}
+.scroll-down-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1, 29; /* 128.571% */
+  letter-spacing: -0.03em;
+  /* color: #ffffff; */
+}
+.benefits-list-title {
+  font-size: 18px;
+  font-weight: 600;
+  /* color: #ffffff; */
+}
+.benefits-list-text {
+  /* color: rgba(255, 255, 255, 0.7); */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+.section-title {
+  color: var(--black, #111);
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1, 17; /* 116.667% */
+  letter-spacing: 0, 03em;
+  text-transform: uppercase;
+}
+.accent-color {
+  color: var(--orange, #fd9222);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1, 17;
+  letter-spacing: 0, 03em;
+  text-transform: uppercase;
+}
+.ingredients-description {
+  text-align: center;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29; /* 128.571% */
+  letter-spacing: -0.02em;
+  color: #111111;
+}
+.ingredients-list-title {
+  color: #ffffff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.29; /* 128.571% */
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+.how-made-title {
+  color: #111111;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+}
+.how-made-list-item {
+  color: #111;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.29; /* 128.571% */
+  letter-spacing: -0.02em;
+}
+.reviews-list-fullname {
+  color: #111;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33px; /* 133.333% */
+}
+.reviews-list-text {
+  color: rgba(17, 17, 17, 0.7);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.29; /* 128.571% */
+  letter-spacing: -0.02em;
+}
+.leave-review-btn {
+  color: #111;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.leave-review-btn:hover,
+.leave-review-btn:focus {
+  color: #ffffff;
+  background-color: #fd9222;
+}
+.contact-title {
+  color: #fff;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+}
+.contact-list-link {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
