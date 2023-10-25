@@ -1,3 +1,26 @@
+/* ============== COMMON STYLES ============== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
 .link {
   text-decoration: none;
 }
@@ -8,12 +31,49 @@ button {
   /* міняється курсор */
   cursor: pointer;
 }
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
 body {
   /* serif - засічки, хвостики 
     sans-serif - без засічок
     */
   font-family: "Montserrat", sans-serif;
+  background-color: #fafafa;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.container {
+  width: 1168px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.page-header {
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+.page-navigation {
+  display: flex;
+  align-items: center;
+  /* 1 притескається до праи. 2 до ліва */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 980px;
 }
 
 .logotype {
@@ -32,7 +92,10 @@ body {
   /* гарно коли є 6 цифер в кольорі */
   color: #111111;
 }
-
+.menu {
+  display: flex;
+  column-gap: 24px;
+}
 .menu-link {
   font-size: 14px;
   font-weight: 500;
@@ -94,25 +157,33 @@ body {
   letter-spacing: -0.02em;
 }
 .section-title {
-  color: var(--black, #111);
+  color: #111;
   text-align: center;
   font-size: 24px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 1, 17; /* 116.667% */
-  letter-spacing: 0, 03em;
+  line-height: 1.17; /* 116.667% */
+  letter-spacing: -0.03em;
   text-transform: uppercase;
 }
 .accent-color {
-  color: var(--orange, #fd9222);
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1, 17;
-  letter-spacing: 0, 03em;
-  text-transform: uppercase;
+  color: #fd9222;
+}
+
+/* винесли в загальний клас section */
+/* .ingredients { */
+/* міряємо  відстан між секціями і ділимо на 2 */
+/* padding-top: 50px; */
+/* padding-bottom: 50px; */
+/* }  */
+
+.ingredients-tittle {
+  width: 411px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 28px;
 }
 .ingredients-description {
+  width: 486px;
   text-align: center;
   font-style: normal;
   font-size: 14px;
@@ -120,15 +191,49 @@ body {
   line-height: 1.29; /* 128.571% */
   letter-spacing: -0.02em;
   color: #111111;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+.ingredients-list {
+  display: flex;
+  column-gap: 19px;
+  flex-wrap: wrap;
 }
 .ingredients-list-title {
-  color: #ffffff;
+  /* color: #ffffff; */
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.29; /* 128.571% */
   letter-spacing: -0.02em;
   text-transform: uppercase;
+}
+.ingredients-list-item {
+  /* width: 269px; */
+  /* _100% - к-ть відступів * на довжину відступів) \ к-ть частин*/
+  width: calc((100% - 3 * 19px) / 4);
+  border-radius: 15px;
+  border: 1px solid #fd9222;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 28px;
+  padding-right: 36px;
+}
+.ingredients-list-img {
+  margin-bottom: 36px;
+}
+.ingredients-list-item:nth-child(4n + 1) {
+  background: #fd9222;
+  color: #ffffff;
+}
+.ingredients-list-item:nth-child(4n + 3) {
+  border-color: #1e1823;
+  background-color: #1e1823;
+  color: #ffffff;
+}
+.ingredients-list-item:nth-child(even) {
+  background-color: #ffffff;
 }
 .how-made-title {
   color: #111111;
