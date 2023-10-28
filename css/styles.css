@@ -43,6 +43,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #fafafa;
 }
+/* ховає заголовок */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -279,13 +280,32 @@ body {
   color: #ffffff;
   background-color: #fd9222;
 }
+/* ============== FOOTER STYLES ============== */
+.page-footer {
+  background: #1e1823;
+}
+.page-footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.page-footer-title {
+  width: 300px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
 .contact-title {
   color: #fff;
-  font-size: 28px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.29;
   letter-spacing: -0.56px;
+  margin-bottom: 14px;
 }
 .contact-list-link {
   font-size: 14px;
@@ -293,5 +313,16 @@ body {
   font-style: normal;
   line-height: 1.29;
   letter-spacing: -0.02em;
-  text-align: center;
+  color: #ffffff;
 }
+.contact-list-item:not(:last-child) {
+  margin-bottom: 4px;
+}
+.page-footer-bottom-block {
+  padding-top: 24px;
+}
+
+.page-footer-menu {
+  color: #ffffff;
+}
+/* ============== /FOOTER STYLES ============== */
