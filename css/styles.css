@@ -71,7 +71,7 @@ body {
 .page-navigation {
   display: flex;
   align-items: center;
-  /* 1 притескається до праи. 2 до ліва */
+  /* перше притискається до права. друге до ліва */
   justify-content: space-between;
   width: 100%;
   max-width: 980px;
