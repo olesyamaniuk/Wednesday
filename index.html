@@ -22,15 +22,18 @@
   <body>
     <!-- page header -->
     <header class="page-header">
-      <div class="container">
+      <div class="container page-header-container">
         <nav class="page-navigation">
           <a class="logotype link" href="./index.html"
-            ><i>SIMPLY</i> CHOCOLADE</a
-          >
+            ><i>SIMPLY</i> CHOCOLADE
+            <svg class="logotipe-icon" width="24" heigh="24" aria-label="icon">
+              <use href="./images/icons/symbol-defs.svg#icon-logo"></use>
+            </svg>
+          </a>
           <!--щоб текст був курсивом 
         <i></i>
       <em></em> -->
-          <ul class="menu list">
+          <ul class="menu page-header-menu list">
             <li class="menu-item">
               <a class="menu-link link" href="./index.html">Home</a>
             </li>
@@ -42,6 +45,22 @@
             </li>
           </ul>
         </nav>
+        <ul class="social-list list">
+          <li class="social-list-item">
+            <a href="" class="social-list-link">
+              <svg class="social-list-icon" width="24" heigh="24">
+                <use href="./images/icons/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a href="" class="social-list-link">
+              <svg class="social-list-icon" width="24" heigh="24">
+                <use href="./images/icons/symbol-defs.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -52,46 +71,50 @@
           Treat yourself or a loved one to our finest ingredients for a moment
           of pure delight!
         </h1>
-        <button class="buy-now-btn" type="button">Buy now</button>
-        <a class="how-made-link link" href="#how-made">How it's made</a>
-        <a class="scroll-down-link link" href="#benefits">scroll down</a>
+        <div class="hero-bottom-block">
+          <button class="buy-now-btn" type="button">Buy now</button>
+          <a class="how-made-link link" href="#how-made">How it's made</a>
+          <a class="scroll-down-link link" href="#benefits">scroll down</a>
+        </div>
       </section>
       <!-- OUR BENEFITS -->
       <section class="benefits" id="benefits">
-        <h2 class="visually-hidden">Our benefits</h2>
-        <ul class="benefits-list list">
-          <li class="benefits-list-item">
-            <h3 class="benefits-list-title">Unsurpassed taste</h3>
-            <p class="benefits-list-text">
-              Crafted with the finest quality cocoa beans and a dedication to
-              perfection, each bite is a decadent experience that simply cannot
-              be matched. Savor the richness and complexity of our Unsurpassed
-              Taste and discover a new level of chocolate bliss.
-            </p>
-          </li>
-          <li class="benefits-list-item">
-            <h3 class="benefits-list-title">Affordable price</h3>
-            <p class="benefits-list-text">
-              Indulge in high-quality chocolate without breaking the bank with
-              Simply Chocolate's selection of affordable treats. Enjoy
-              mouth-watering truffles and velvety chocolate bars without
-              sacrificing taste or quality. Browse our selection and indulge in
-              affordable luxury today.
-            </p>
-          </li>
-          <li class="benefits-list-item">
-            <h3 class="benefits-list-title">Own production</h3>
-            <p class="benefits-list-text">
-              We take pride in our own production process, ensuring that every
-              step is carefully crafted to perfection. From selecting the finest
-              ingredients to handcrafting each piece, our attention to detail is
-              evident in every bite.
-            </p>
-          </li>
-        </ul>
+        <div class="container benefits-container">
+          <h2 class="visually-hidden">Our benefits</h2>
+          <ul class="benefits-list list">
+            <li class="benefits-list-item">
+              <h3 class="benefits-list-title">Unsurpassed taste</h3>
+              <p class="benefits-list-text">
+                Crafted with the finest quality cocoa beans and a dedication to
+                perfection, each bite is a decadent experience that simply
+                cannot be matched. Savor the richness and complexity of our
+                Unsurpassed Taste and discover a new level of chocolate bliss.
+              </p>
+            </li>
+            <li class="benefits-list-item">
+              <h3 class="benefits-list-title">Affordable price</h3>
+              <p class="benefits-list-text">
+                Indulge in high-quality chocolate without breaking the bank with
+                Simply Chocolate's selection of affordable treats. Enjoy
+                mouth-watering truffles and velvety chocolate bars without
+                sacrificing taste or quality. Browse our selection and indulge
+                in affordable luxury today.
+              </p>
+            </li>
+            <li class="benefits-list-item">
+              <h3 class="benefits-list-title">Own production</h3>
+              <p class="benefits-list-text">
+                We take pride in our own production process, ensuring that every
+                step is carefully crafted to perfection. From selecting the
+                finest ingredients to handcrafting each piece, our attention to
+                detail is evident in every bite.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- INGREDIENTS SECTION -->
-      <section class="ingredients secrion">
+      <section class="ingredients section">
         <div class="container">
           <h2 class="section-title ingredients-tittle">
             it all adds up to one exceptional
@@ -113,6 +136,24 @@
                 height="160"
               />
               <h3 class="ingredients-list-title">milk chocolate</h3>
+              <div class="overlay">
+                <h3 class="overlay-title">Milk chocolate</h3>
+                <ul class="overlay-tags-list list">
+                  <li class="overlay-tags-list-item">
+                    <p class="overlay-tags-list-text">chocolate</p>
+                  </li>
+                  <li class="overlay-tags-list-item">
+                    <p class="overlay-tags-list-text">the benefits</p>
+                  </li>
+                </ul>
+                <p class="overlay-text">
+                  Milk chocolate is a solid chocolate confectionery containing
+                  cocoa, sugar and milk. It is the most consumed type of
+                  chocolate. Chocolate was originally sold and consumed as a
+                  beverage in pre-Columbian times. Although four-fifths of all
+                  milk chocolate is sold in the United States and Europe.
+                </p>
+              </div>
             </li>
             <li class="ingredients-list-item">
               <img
@@ -149,102 +190,107 @@
       </section>
       <!-- how it's made? section -->
       <section class="how-made section" id="made">
-        <h2 class="section-title">
-          how it's <span class="accent-color">made</span>?
-        </h2>
-        <img
-          src="/images/how-made/how-made.jpg"
-          alt="chocolate making process"
-          width="600"
-          height="400"
-        />
-        <h3 class="how-made-title">
-          Try our chocolates today and discover the perfect balance of flavor
-        </h3>
-        <ul class="how-made-list">
-          <li class="how-made-list-item">
-            Heat the milk in a saucepan without bringing it to a boil. Add sugar
-            and cocoa powder.
-          </li>
-          <li class="how-made-list-item">
-            At the same time, prepare a water bath. Melt the butter on it.
-          </li>
-          <li class="how-made-list-item">
-            "Mix" the milk mixture and already liquid butter. Mix thoroughly
-            with a silicone spatula so that the mass becomes uniform and silky.
-          </li>
-          <li class="how-made-list-item">
-            Heat the mixture over low heat, letting it barely boil.
-          </li>
-          <li class="how-made-list-item">
-            Pour the chocolate into special containers (can be replaced with ice
-            molds). Allow to cool and harden.
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="section-title">
+            how it's <span class="accent-color">made</span>?
+          </h2>
+          <img
+            src="/images/how-made/how-made.jpg"
+            alt="chocolate making process"
+            width="600"
+            height="400"
+          />
+          <h3 class="how-made-title">
+            Try our chocolates today and discover the perfect balance of flavor
+          </h3>
+          <ul class="how-made-list">
+            <li class="how-made-list-item">
+              Heat the milk in a saucepan without bringing it to a boil. Add
+              sugar and cocoa powder.
+            </li>
+            <li class="how-made-list-item">
+              At the same time, prepare a water bath. Melt the butter on it.
+            </li>
+            <li class="how-made-list-item">
+              "Mix" the milk mixture and already liquid butter. Mix thoroughly
+              with a silicone spatula so that the mass becomes uniform and
+              silky.
+            </li>
+            <li class="how-made-list-item">
+              Heat the mixture over low heat, letting it barely boil.
+            </li>
+            <li class="how-made-list-item">
+              Pour the chocolate into special containers (can be replaced with
+              ice molds). Allow to cool and harden.
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- REVIEWS SECTION -->
-      <section class="reviews" id="reviews">
-        <h2 class="section-title">
-          <span class="accent-color">Chocolate</span> is loved
-        </h2>
-        <ul class="reviews-list list">
-          <li class="reviews-list-item">
-            <img
-              class="reviews-list-avatar"
-              src="./images/reviews/victoria-dobrzhanska.png"
-              alt="Victoria Dobrzhanska"
-              width="80"
-              height="80"
-            />
-            <h3 class="reviews-list-fullname">Victoria Dobrzhanska</h3>
-            <p class="reviews-list-text">
-              I love this chocolate bar. Perfect combination of light crispy
-              wafer, covered in a thin layer chocolate.
-            </p>
-          </li>
-          <li class="reviews-list-item">
-            <img
-              class="reviews-list-avatar"
-              src="./images/reviews/nazar-babenko.png"
-              alt="Nazar Babenko"
-              width="80"
-              height="80"
-            />
-            <h3 class="reviews-list-fullname">Nazar Babenko</h3>
-            <p class="reviews-list-text">
-              This chocolate confection is a delight! A delight! The wafer is
-              light and crisp, the hazelnut cream is smooth, and the chocolate
-              is good.
-            </p>
-          </li>
-          <li class="reviews-list-item">
-            <img
-              class="reviews-list-avatar"
-              src="./images/reviews/olena-kampusch.png"
-              alt="Olena Kampusch"
-              width="80"
-              height="80"
-            />
-            <h3 class="reviews-list-fullname">Olena Kampusch</h3>
-            <p class="reviews-list-text">
-              Chocolate is a family favourite treat. Love the delicious smooth
-              chocolate and the creaminess inside. The wafer is soft but
-              crunchy.
-            </p>
-          </li>
-        </ul>
-        <button class="leave-review-btn" type="button">Leave a review</button>
+      <section class="reviews section" id="reviews">
+        <div class="container">
+          <h2 class="section-title reviews-title">
+            <span class="accent-color">Chocolate</span> is loved
+          </h2>
+          <ul class="reviews-list list">
+            <li class="reviews-list-item">
+              <img
+                class="reviews-list-avatar"
+                src="./images/reviews/victoria-dobrzhanska.png"
+                alt="Victoria Dobrzhanska"
+                width="80"
+                height="80"
+              />
+              <h3 class="reviews-list-fullname">Victoria Dobrzhanska</h3>
+              <p class="reviews-list-text">
+                I love this chocolate bar. Perfect combination of light crispy
+                wafer, covered in a thin layer chocolate.
+              </p>
+            </li>
+            <li class="reviews-list-item">
+              <img
+                class="reviews-list-avatar"
+                src="./images/reviews/nazar-babenko.png"
+                alt="Nazar Babenko"
+                width="80"
+                height="80"
+              />
+              <h3 class="reviews-list-fullname">Nazar Babenko</h3>
+              <p class="reviews-list-text">
+                This chocolate confection is a delight! A delight! The wafer is
+                light and crisp, the hazelnut cream is smooth, and the chocolate
+                is good.
+              </p>
+            </li>
+            <li class="reviews-list-item">
+              <img
+                class="reviews-list-avatar"
+                src="./images/reviews/olena-kampusch.png"
+                alt="Olena Kampusch"
+                width="80"
+                height="80"
+              />
+              <h3 class="reviews-list-fullname">Olena Kampusch</h3>
+              <p class="reviews-list-text">
+                Chocolate is a family favourite treat. Love the delicious smooth
+                chocolate and the creaminess inside. The wafer is soft but
+                crunchy.
+              </p>
+            </li>
+          </ul>
+          <button class="leave-review-btn" type="button">Leave a review</button>
+        </div>
       </section>
     </main>
     <!-- footer -->
     <footer class="page-footer section">
       <div class="container">
-        <div class="page-footer-top">
+        <div class="page-footer-top-block">
           <h2 class="page-footer-title">
             <span class="accent-color">Chocolate</span> a delicious cure for a
             bad day
           </h2>
-          <div page-footer-contact>
+          <div page-footer-contact-block>
             <h3 class="contact-title">Contact us</h3>
             <address>
               <ul class="contact-list list">
@@ -264,7 +310,7 @@
             </address>
           </div>
         </div>
-        <div class="page-footer-bottom">
+        <div class="page-footer-bottom-block">
           <nav class="page-navigation">
             <ul class="menu list">
               <li class="menu-item">

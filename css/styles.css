@@ -64,6 +64,9 @@ body {
   padding-left: 16px;
   padding-right: 16px;
 }
+/* ============== /COMMON STYLES ============== */
+
+/* ============== HEADER STYLES ============== */
 .page-header {
   padding-top: 24px;
   padding-bottom: 32px;
@@ -78,6 +81,8 @@ body {
 }
 
 .logotype {
+  display: flex;
+  align-items: center;
   font-size: 18px;
   /* за замовчування посилання має 400 */
   font-weight: 700;
@@ -93,35 +98,95 @@ body {
   /* гарно коли є 6 цифер в кольорі */
   color: #111111;
 }
+.logotipe-icon {
+  margin-left: 4px;
+}
 .menu {
   display: flex;
   column-gap: 24px;
 }
+.page-header-menu {
+  color: #111111;
+}
 .menu-link {
   font-size: 14px;
   font-weight: 500;
-  line-height: 1, 14;
-  letter-spacing: -0, 02em;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
   color: #111111;
+  transition: color 250ms linear;
 }
 .menu-link:hover,
 .menu-link:focus {
   color: #fd9222;
 }
+.social-list-icon {
+  fill: none;
+  stroke: #111;
+  transition: stroke 250ms linear;
+}
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  stroke: #fd9222;
+}
+.social-list {
+  display: flex;
+  gap: 18px;
+}
+.page-header-container {
+  display: flex;
+  justify-content: space-between;
+}
+.social-list-link {
+  display: block;
+  line-height: 0;
+}
 
-/* ========== */
+/* ============== HEADER STYLES ============== */
+
+/* ============== HERO STYLES ============== */
+.hero {
+  max-width: 1136px;
+  padding-top: 381px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  background: rgba(17, 17, 17, 0.6);
+  /* додємо фонове зображення */
+  background-image: linear-gradient(
+      rgba(17, 17, 17, 0.4),
+      rgba(17, 17, 17, 0.4)
+    ),
+    url("../images/hero/bg.jpg");
+  background-size: cover;
+}
 
 .main-title {
+  max-width: 470px;
   font-size: 28px;
   font-weight: 500;
-  line-height: 1, 21; /* 121.429% */
+  line-height: 1.21;
   letter-spacing: -0.03em;
-  /* color: #ffffff; */
+  margin-bottom: 32px;
+  color: #ffffff;
+}
+.hero-bottom-block {
+  display: flex;
+  align-items: center;
 }
 .buy-now-btn {
+  min-width: 144px;
+  height: 45px;
   font-size: 14px;
   font-weight: 600;
-  background: #fd9222;
+  margin-right: 14px;
+  border-radius: 100px;
+  border: none;
+  background-color: #fd9222;
+  color: #ffffff;
 }
 .buy-now-btn:hover,
 .buy-now-btn:focus {
@@ -130,33 +195,72 @@ body {
 }
 
 .how-made-link {
+  display: flex;
+  align-items: center;
+  min-width: 183px;
+  height: 45px;
   font-size: 14px;
   font-weight: 600;
-  /* color: #ffffff; */
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 100px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
 }
 .how-made-link:hover,
 .how-made-link:focus {
   color: #fd9222;
+  border-color: #fd9222;
 }
 .scroll-down-link {
+  display: block;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1, 29; /* 128.571% */
+  line-height: 1.29;
   letter-spacing: -0.03em;
-  /* color: #ffffff; */
+  margin-left: auto;
+  color: #ffffff;
+}
+.scroll-down-link:hover,
+.scroll-down-link:focus {
+  color: #fd9222;
+}
+/* ============== /HERO STYLES ============== */
+
+/* ============== BENEFITS STYLES ============== */
+.benefits {
+  margin-top: 72px;
+  margin-bottom: 50px;
+  background-color: #1e1823;
+}
+.benefits-container {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+.benefits-list {
+  display: flex;
+  column-gap: 88px;
+}
+.benefits-list-item {
+  width: calc((100% - 196px) / 3);
 }
 .benefits-list-title {
   font-size: 18px;
   font-weight: 600;
-  /* color: #ffffff; */
+  margin-bottom: 18px;
+  color: #ffffff;
 }
+
 .benefits-list-text {
-  /* color: rgba(255, 255, 255, 0.7); */
   font-size: 14px;
   font-weight: 400;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.7);
 }
+/* ============== /BENEFITS STYLES ============== */
+
+/* ============== INGREDIENTS STYLES ============== */
 .section-title {
   color: #111;
   text-align: center;
@@ -220,6 +324,10 @@ body {
   padding-bottom: 28px;
   padding-left: 28px;
   padding-right: 36px;
+  /* зоб можна було над елем розмістити overlay */
+  position: relative;
+  /* щоб сховався overlay(що вилізає ща контен зовається) */
+  overflow: hidden;
 }
 .ingredients-list-img {
   margin-bottom: 36px;
@@ -236,12 +344,94 @@ body {
 .ingredients-list-item:nth-child(even) {
   background-color: #ffffff;
 }
+
+.overlay {
+  /* щоб розмістити над інишим елементом */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 20px;
+  border-radius: 15px;
+  color: #111111;
+  background-color: #ffffff;
+  /* щоб тест ховався . мусит бути висота*/
+  overflow: auto;
+  height: 100%;
+  /* щоб посунути карточку вниз */
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+}
+.overlay-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.overlay-tags-list {
+  display: flex;
+  column-gap: 6px;
+  margin-bottom: 14px;
+}
+
+.overlay-tags-list-item:nth-child(odd) .overlay-tags-list-text {
+  background-color: #fd9222;
+  color: #ffffff;
+}
+
+.overlay-tags-list-item:nth-child(even) .overlay-tags-list-text {
+  background-color: #fafafa;
+}
+
+.overlay-tags-list-text {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 35px;
+  border: 1px solid #fd9222;
+}
+
+.overlay-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+.ingredients-list-item:hover .overlay {
+  transform: translateY(0%);
+}
+
+/* ============== INGREDIENTS STYLES ============== */
+
+/* ============== HOW MADE STYLES ============== */
+.how-made-content-wrapper {
+  display: flex;
+  column-gap: 20px;
+}
+.how-made-text-wrapper {
+  flex-grow: 1;
+  padding: 32px;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
 .how-made-title {
   color: #111111;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.33; /* 133.333% */
+  color: #111111;
+}
+.how-made-list {
+  padding-right: 26px;
 }
 .how-made-list-item {
   color: #111;
@@ -251,40 +441,81 @@ body {
   line-height: 1.29; /* 128.571% */
   letter-spacing: -0.02em;
 }
-.reviews-list-fullname {
-  color: #111;
-  text-align: center;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.33px; /* 133.333% */
+.how-made-list-item:not(:last-child) {
+  margin-bottom: 24px;
 }
-.reviews-list-text {
-  color: rgba(17, 17, 17, 0.7);
+/* ============== /HOW MADE STYLES ============== */
+
+/* ============== REVIEW STYLES ============== */
+.reviews-title {
+  margin-bottom: 50px;
+}
+
+.reviews-list {
+  display: flex;
+  column-gap: 28px;
+  margin-bottom: 50px;
+}
+
+.reviews-list-item {
+  width: calc((100% - 56px) / 3);
+  padding-top: 56px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 9.05px 100px 0px rgba(17, 17, 17, 0.03);
+}
+.reviews-list-fullname {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
   text-align: center;
+  color: #111111;
+}
+
+.reviews-list-text {
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 1.29; /* 128.571% */
+  line-height: 1.29;
   letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(17, 17, 17, 0.7);
 }
 .leave-review-btn {
-  color: #111;
+  display: block;
+  width: 222px;
   font-size: 18px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100px;
+  border: 1px solid #fd9222;
+  color: #111111;
+  background-color: #ffffff;
 }
 .leave-review-btn:hover,
 .leave-review-btn:focus {
   color: #ffffff;
   background-color: #fd9222;
 }
+/* ============== /REVIEW STYLES ============== */
+
 /* ============== FOOTER STYLES ============== */
 .page-footer {
   background: #1e1823;
 }
-.page-footer-top {
+.page-footer-top-block {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.page-footer-top-block {
   display: flex;
   justify-content: space-between;
   padding-bottom: 50px;
