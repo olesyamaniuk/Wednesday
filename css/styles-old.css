@@ -1,0 +1,743 @@
+/* ============== COMMON STYLES ============== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style-type: none;
+}
+button {
+  /* міняється курсор */
+  cursor: pointer;
+}
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+body {
+  /* serif - засічки, хвостики 
+    sans-serif - без засічок
+    */
+  font-family: "Montserrat", sans-serif;
+  background-color: #fafafa;
+}
+/* ховає заголовок */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.container {
+  width: 1168px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+/* ============== /COMMON STYLES ============== */
+
+/* ============== HEADER STYLES ============== */
+.page-header {
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+.page-navigation {
+  display: flex;
+  align-items: center;
+  /* перше притискається до права. друге до ліва */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 980px;
+}
+
+.logotype {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  /* за замовчування посилання має 400 */
+  font-weight: 700;
+  /* line-height > font-size*/
+  /* line-height: 20px; */
+  /* line-height / font-size 20/18=1.111111111*/
+  line-height: 1.11;
+
+  /* 1em = font-size*/
+  /* letter-spacing: -0.54px; */
+  /* letter-spacing / font-size */
+  letter-spacing: -0.03em;
+  /* гарно коли є 6 цифер в кольорі */
+  color: #111111;
+}
+.logotipe-icon {
+  margin-left: 4px;
+}
+.menu {
+  display: flex;
+  column-gap: 24px;
+}
+.page-header-menu {
+  color: #111111;
+}
+.menu-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  color: #111111;
+  transition: color 250ms linear;
+}
+.menu-link:hover,
+.menu-link:focus {
+  color: #fd9222;
+}
+.social-list-icon {
+  fill: none;
+  stroke: #111;
+  transition: stroke 250ms linear;
+}
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  stroke: #fd9222;
+}
+.social-list {
+  display: flex;
+  gap: 18px;
+}
+.page-header-container {
+  display: flex;
+  justify-content: space-between;
+}
+.social-list-link {
+  display: block;
+  line-height: 0;
+}
+
+/* ============== HEADER STYLES ============== */
+
+/* ============== HERO STYLES ============== */
+.hero {
+  max-width: 1136px;
+  padding-top: 381px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  background: rgba(17, 17, 17, 0.6);
+  /* додємо фонове зображення */
+  background-image: linear-gradient(
+      rgba(17, 17, 17, 0.4),
+      rgba(17, 17, 17, 0.4)
+    ),
+    url("../images/hero/bg.jpg");
+  background-size: cover;
+}
+
+.main-title {
+  max-width: 470px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+  color: #ffffff;
+}
+.hero-bottom-block {
+  display: flex;
+  align-items: center;
+}
+.buy-now-btn {
+  min-width: 144px;
+  height: 45px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 14px;
+  border-radius: 100px;
+  border: none;
+  background-color: #fd9222;
+  color: #ffffff;
+}
+.buy-now-btn:hover,
+.buy-now-btn:focus {
+  background-color: #fcf1e0;
+  color: #fd9222;
+}
+
+.how-made-link {
+  display: flex;
+  align-items: center;
+  min-width: 183px;
+  height: 45px;
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 100px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+.how-made-link:hover,
+.how-made-link:focus {
+  color: #fd9222;
+  border-color: #fd9222;
+}
+.scroll-down-link {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
+  margin-left: auto;
+  color: #ffffff;
+}
+.scroll-down-link:hover,
+.scroll-down-link:focus {
+  color: #fd9222;
+}
+/* ============== /HERO STYLES ============== */
+
+/* ============== BENEFITS STYLES ============== */
+.benefits {
+  margin-top: 72px;
+  margin-bottom: 50px;
+  background-color: #1e1823;
+}
+.benefits-container {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+.benefits-list {
+  display: flex;
+  column-gap: 88px;
+}
+.benefits-list-item {
+  width: calc((100% - 196px) / 3);
+}
+.benefits-list-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.benefits-list-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.7);
+}
+/* ============== /BENEFITS STYLES ============== */
+
+/* ============== INGREDIENTS STYLES ============== */
+.section-title {
+  color: #111;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.17; /* 116.667% */
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.accent-color {
+  color: #fd9222;
+}
+
+/* винесли в загальний клас section */
+/* .ingredients { */
+/* міряємо  відстан між секціями і ділимо на 2 */
+/* padding-top: 50px; */
+/* padding-bottom: 50px; */
+/* }  */
+
+.ingredients-tittle {
+  width: 411px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 28px;
+}
+.ingredients-description {
+  width: 486px;
+  text-align: center;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29; /* 128.571% */
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+.ingredients-list {
+  display: flex;
+  column-gap: 19px;
+  flex-wrap: wrap;
+}
+.ingredients-list-title {
+  /* color: #ffffff; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.29; /* 128.571% */
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+.ingredients-list-item {
+  /* width: 269px; */
+  /* _100% - к-ть відступів * на довжину відступів) \ к-ть частин*/
+  width: calc((100% - 3 * 19px) / 4);
+  border-radius: 15px;
+  border: 1px solid #fd9222;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 28px;
+  padding-right: 36px;
+  /* зоб можна було над елем розмістити overlay */
+  position: relative;
+  /* щоб сховався overlay(що вилізає ща контен зовається) */
+  overflow: hidden;
+}
+.ingredients-list-img {
+  margin-bottom: 36px;
+}
+.ingredients-list-item:nth-child(4n + 1) {
+  background: #fd9222;
+  color: #ffffff;
+}
+.ingredients-list-item:nth-child(4n + 3) {
+  border-color: #1e1823;
+  background-color: #1e1823;
+  color: #ffffff;
+}
+.ingredients-list-item:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.overlay {
+  /* щоб розмістити над інишим елементом */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 20px;
+  border-radius: 15px;
+  color: #111111;
+  background-color: #ffffff;
+  /* щоб тест ховався . мусит бути висота*/
+  overflow: auto;
+  height: 100%;
+  /* щоб посунути карточку вниз */
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+}
+.overlay-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.overlay-tags-list {
+  display: flex;
+  column-gap: 6px;
+  margin-bottom: 14px;
+}
+
+.overlay-tags-list-item:nth-child(odd) .overlay-tags-list-text {
+  background-color: #fd9222;
+  color: #ffffff;
+}
+
+.overlay-tags-list-item:nth-child(even) .overlay-tags-list-text {
+  background-color: #fafafa;
+}
+
+.overlay-tags-list-text {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 35px;
+  border: 1px solid #fd9222;
+}
+
+.overlay-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+.ingredients-list-item:hover .overlay {
+  transform: translateY(0%);
+}
+
+/* ============== INGREDIENTS STYLES ============== */
+
+/* ============== HOW MADE STYLES ============== */
+.how-made-content-wrapper {
+  display: flex;
+  column-gap: 20px;
+}
+.how-made-text-wrapper {
+  flex-grow: 1;
+  padding: 32px;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+.how-made-title {
+  color: #111111;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+  color: #111111;
+}
+.how-made-list {
+  padding-right: 26px;
+}
+.how-made-list-item {
+  color: #111;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.29; /* 128.571% */
+  letter-spacing: -0.02em;
+}
+.how-made-list-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+/* ============== /HOW MADE STYLES ============== */
+
+/* ============== REVIEW STYLES ============== */
+.reviews-title {
+  margin-bottom: 50px;
+}
+
+.reviews-list {
+  display: flex;
+  column-gap: 28px;
+  margin-bottom: 50px;
+}
+
+.reviews-list-item {
+  width: calc((100% - 56px) / 3);
+  padding-top: 56px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 9.05px 100px 0px rgba(17, 17, 17, 0.03);
+}
+.reviews-list-fullname {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+  text-align: center;
+  color: #111111;
+}
+
+.reviews-list-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(17, 17, 17, 0.7);
+}
+.leave-review-btn {
+  display: block;
+  width: 222px;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100px;
+  border: 1px solid #fd9222;
+  color: #111111;
+  background-color: #ffffff;
+}
+.leave-review-btn:hover,
+.leave-review-btn:focus {
+  color: #ffffff;
+  background-color: #fd9222;
+}
+/* ============== /REVIEW STYLES ============== */
+
+/* ============== FOOTER STYLES ============== */
+.page-footer {
+  background: #1e1823;
+}
+.page-footer-top-block {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.page-footer-top-block {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.page-footer-title {
+  width: 300px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+.contact-title {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+  margin-bottom: 14px;
+}
+.contact-list-link {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+.contact-list-item:not(:last-child) {
+  margin-bottom: 4px;
+}
+.page-footer-bottom-block {
+  padding-top: 24px;
+}
+
+.page-footer-menu {
+  color: #ffffff;
+}
+/* ============== /FOOTER STYLES ============== */
+/* ============== BACKDROP STYLES ============== */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* ховаємо елемент */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+/* показуємо елемент */
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+/* ============== /BACKDROP STYLES ============== */
+
+/* ============== MODAL WINDOW STYLES ============== */
+.modal {
+  /* ставимо по центру */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 517px;
+  min-height: 794px;
+  border-radius: 15px;
+  background-color: #fafafa;
+  padding: 40px;
+}
+
+.modal-close-btn {
+  /* виймаємо з потоку щоб не мішало іншому тексту  */
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+  /* щоб кнопка була по розмірах іконки */
+  line-height: 0;
+  /* задаємо колір іконці */
+  stroke: #111111;
+  transition: stroke 250ms linear;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  stroke: #fd9222;
+}
+
+.review-form-description {
+  width: 298px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 40px;
+}
+/* ============== /MODAL WINDOW STYLES ============== */
+
+/* ============== REVIEW FORM STYLES ============== */
+.review-form-field-label {
+  /* щоб інпут був з нового рядка */
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+  margin-bottom: 8px;
+}
+
+.review-form-field-wrapper {
+  margin-bottom: 18px;
+}
+
+.review-form-input-wrapper {
+  position: relative;
+}
+
+.review-form-field {
+  width: 100%;
+  height: 68px;
+  border-radius: 13px;
+  border: 1px solid rgba(17, 17, 17, 0.05);
+  padding-left: 62px;
+  transition: border-color 250ms linear;
+}
+
+.review-form-field:focus {
+  border-color: #fd9222;
+  /* забираємо зовнішню рамку яка є за замовчуванням 
+  бо вона перекриває бордер*/
+  outline-color: transparent;
+  outline-offset: 4px;
+}
+
+.review-form-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  fill: none;
+  stroke: #111111;
+  transition: stroke 250ms linear;
+}
+
+/* + селектор сусуді */
+.review-form-field:focus + .review-form-field-icon {
+  stroke: #fd9222;
+}
+
+.review-form-message {
+  width: 100%;
+  height: 137px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  border-radius: 13px;
+  border: 1px solid rgba(17, 17, 17, 0.05);
+  /* забираємо повзунок */
+  resize: none;
+  padding: 22px 24px;
+  color: rgba(64, 64, 64, 0.3);
+  transition: border-color 250ms linear;
+}
+/* placeholder*/
+.review-form-message::placeholder {
+  color: rgba(64, 64, 64, 0.3);
+}
+
+.review-form-message:focus {
+  border-color: #fd9222;
+  outline-color: transparent;
+  outline-offset: 4px;
+}
+
+.review-form-checkbox-wrapper {
+  margin-bottom: 40px;
+}
+
+.review-form-checkbox-label {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.6);
+}
+
+.review-form-own-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  cursor: pointer;
+  fill: transparent;
+  margin-right: 12px;
+}
+/* щоб обироати чекбокс */
+.review-form-checkbox:checked
+  + .review-form-checkbox-label
+  .review-form-own-checkbox {
+  background-color: #fd9222;
+  fill: #ffffff;
+}
+/* щоб зімнити в нашовго нового чекбокса колір при tab */
+.review-form-checkbox:focus
+  + .review-form-checkbox-label
+  .review-form-own-checkbox {
+  outline: 2px solid rgba(0, 0, 255, 0.5);
+}
+
+/* ============== /REVIEW FORM STYLES ============== */
